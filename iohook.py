@@ -9,11 +9,11 @@ from watchdog.events import PatternMatchingEventHandler
 
 
 class MyHandler(PatternMatchingEventHandler):
-    def __init__(self, command, patterns):
+    def __init__(self,  patterns):
+        # patternsで指定したパターンのファイル名を監視を行うクラス
         super(MyHandler, self).__init__(patterns=patterns)
-        self.command = command
 
-    def _run_command(self):
+    # def _run_command(self):
         # subprocess.call([self.command, ])
 
     def on_moved(self, event):
@@ -40,8 +40,9 @@ class MyHandler(PatternMatchingEventHandler):
             func_name=func_name, key=event.key, path=event.src_path))
 
 
-def watch(path, command, extension):
-    event_handler = MyHandler(command, ["*"])
+def watch(path):
+    # pathで指定したディレクトリの監視を行う
+    event_handler = MyHandler(["*"])
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
     observer.start()
@@ -54,8 +55,8 @@ def watch(path, command, extension):
 
 
 if __name__ == "__main__":
-    if 4 > len(sys.argv):
-        print("Usage:", sys.argv[0], "dir_to_watch command extension")
+    if 2 > len(sys.argv):
+        print("Usage:", sys.argv[0], "dir_to_watch")
     else:
         print("Watchdog start!! ", sys.argv[1:])
-        watch(sys.argv[1], sys.argv[2], sys.argv[3])
+        watch(sys.argv[1])
