@@ -1,3 +1,0 @@
-/Users/gimahirotaka/Desktop/WorkSpace/Mygit/puppy/cpp_boost/build/CMakeFiles/rebuild_cache.dir
-/Users/gimahirotaka/Desktop/WorkSpace/Mygit/puppy/cpp_boost/build/CMakeFiles/edit_cache.dir
-/Users/gimahirotaka/Desktop/WorkSpace/Mygit/puppy/cpp_boost/build/CMakeFiles/set_filter.dir
