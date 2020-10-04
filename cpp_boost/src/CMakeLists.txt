@@ -13,6 +13,6 @@ macro(logged_executable name)
   target_link_libraries(${name} ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${ARGN})
 endmacro(logged_executable)
 
-logged_executable(set_filter)
+logged_executable(sample)
 
 
