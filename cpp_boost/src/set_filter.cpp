@@ -28,13 +28,10 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 namespace logging = boost::log;
-namespace keywords = logging::keywords;
 namespace sinks = logging::sinks;
-namespace logging = boost::log;
 namespace src = boost::log::sources;
+namespace keywords = logging::keywords;
 namespace expr = boost::log::expressions;
-namespace sinks = boost::log::sinks;
-namespace keywords = boost::log::keywords;
 
 typedef sinks::synchronous_sink<sinks::text_file_backend> sink_t;
 
